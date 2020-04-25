@@ -171,7 +171,7 @@ namespace xsimd
      */
     template <class T, size_t A>
     inline auto
-    aligned_allocator<T, A>::allocate(size_type n, const void*) -> pointer
+    aligned_allocator<T, A>::allocate(size_type n, const void* hint) -> pointer
     {
         pointer res = reinterpret_cast<pointer>(aligned_malloc(sizeof(T) * n, A));
         if (res == nullptr)
@@ -187,7 +187,7 @@ namespace xsimd
      * @param n number of objects earlier passed to allocate().
      */
     template <class T, size_t A>
-    inline void aligned_allocator<T, A>::deallocate(pointer p, size_type)
+    inline void aligned_allocator<T, A>::deallocate(pointer p, size_type n)
     {
         aligned_free(p);
     }
