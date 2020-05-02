@@ -248,20 +248,20 @@ namespace xsimd
         static constexpr size_t size = simd_traits<type>::size;
     };
 
-    template <>
-    struct simd_traits<std::complex<float>>
-    {
-        using type = batch<std::complex<float>, XSIMD_BATCH_FLOAT_SIZE>;
-        using bool_type = simd_batch_traits<type>::batch_bool_type;
-        static constexpr size_t size = type::size;
-    };
+    // template <>
+    // struct simd_traits<std::complex<float>>
+    // {
+    //     using type = batch<std::complex<float>, XSIMD_BATCH_FLOAT_SIZE>;
+    //     using bool_type = simd_batch_traits<type>::batch_bool_type;
+    //     static constexpr size_t size = type::size;
+    // };
 
-    template <>
-    struct revert_simd_traits<batch<std::complex<float>, XSIMD_BATCH_FLOAT_SIZE>>
-    {
-        using type = std::complex<float>;
-        static constexpr size_t size = simd_traits<type>::size;
-    };
+    // template <>
+    // struct revert_simd_traits<batch<std::complex<float>, XSIMD_BATCH_FLOAT_SIZE>>
+    // {
+    //     using type = std::complex<float>;
+    //     static constexpr size_t size = simd_traits<type>::size;
+    // };
 
 #ifdef XSIMD_ENABLE_XTL_COMPLEX
     template <bool i3ec>
@@ -297,20 +297,20 @@ namespace xsimd
         static constexpr size_t size = simd_traits<type>::size;
     };
 
-    template <>
-    struct simd_traits<std::complex<double>>
-    {
-        using type = batch<std::complex<double>, XSIMD_BATCH_DOUBLE_SIZE>;
-        using bool_type = simd_batch_traits<type>::batch_bool_type;
-        static constexpr size_t size = type::size;
-    };
+    // template <>
+    // struct simd_traits<std::complex<double>>
+    // {
+    //     using type = batch<std::complex<double>, XSIMD_BATCH_DOUBLE_SIZE>;
+    //     using bool_type = simd_batch_traits<type>::batch_bool_type;
+    //     static constexpr size_t size = type::size;
+    // };
 
-    template <>
-    struct revert_simd_traits<batch<std::complex<double>, XSIMD_BATCH_DOUBLE_SIZE>>
-    {
-        using type = std::complex<double>;
-        static constexpr size_t size = simd_traits<type>::size;
-    };
+    // template <>
+    // struct revert_simd_traits<batch<std::complex<double>, XSIMD_BATCH_DOUBLE_SIZE>>
+    // {
+    //     using type = std::complex<double>;
+    //     static constexpr size_t size = simd_traits<type>::size;
+    // };
 
 #ifdef XSIMD_ENABLE_XTL_COMPLEX
     template <bool i3ec>

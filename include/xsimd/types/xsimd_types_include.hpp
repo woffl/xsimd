@@ -25,7 +25,7 @@
 #include "xsimd_sse_int16.hpp"
 #include "xsimd_sse_int32.hpp"
 #include "xsimd_sse_int64.hpp"
-#include "xsimd_sse_complex.hpp"
+//#include "xsimd_sse_complex.hpp"
 #endif
 
 #if XSIMD_X86_INSTR_SET >= XSIMD_X86_AVX_VERSION
@@ -36,7 +36,7 @@
 #include "xsimd_avx_int16.hpp"
 #include "xsimd_avx_int32.hpp"
 #include "xsimd_avx_int64.hpp"
-#include "xsimd_avx_complex.hpp"
+// #include "xsimd_avx_complex.hpp"
 #endif
 
 #if XSIMD_X86_INSTR_SET >= XSIMD_X86_AVX512_VERSION
@@ -48,7 +48,7 @@
 #include "xsimd_avx512_int16.hpp"
 #include "xsimd_avx512_int32.hpp"
 #include "xsimd_avx512_int64.hpp"
-#include "xsimd_avx512_complex.hpp"
+// #include "xsimd_avx512_complex.hpp"
 #endif
 
 #if XSIMD_ARM_INSTR_SET >= XSIMD_ARM7_NEON_VERSION
@@ -66,7 +66,7 @@
 #include "xsimd_neon_uint32.hpp"
 #include "xsimd_neon_int64.hpp"
 #include "xsimd_neon_uint64.hpp"
-#include "xsimd_neon_complex.hpp"
+// #include "xsimd_neon_complex.hpp"
 #endif
 
 #if !defined(XSIMD_INSTR_SET_AVAILABLE)
